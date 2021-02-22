@@ -57,10 +57,10 @@
 	                        <p class="hero-paragraph is-revealing">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
 							<div class="hero-form field field-grouped is-revealing">
 	                            <div class="control control-expanded">
-	                                <input class="input" type="email" name="email" placeholder="Your best email&hellip;">
+	                                <input class="input" type="email" name="email" placeholder="Your email please&hellip;">
 	                            </div>
 	                            <div class="control">
-	                                <a class="button button-primary button-block" href="#">Notify Me</a>
+	                                <a class="button button-primary button-block" href="#">Send</a>
 	                            </div>
 	                        </div>
 						</div>

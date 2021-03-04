@@ -4,7 +4,7 @@
     $_SESSION['password'] = $_REQUEST['password'];
 
 // Pr�fe Inhalt von Eingabe  
-    	if ((strlen($_SESSION['benutzer'])>0)and (strlen($_SESSION['password'])>0))
+	if ((strlen($_SESSION['benutzer'])>0)and (strlen($_SESSION['password'])>0))
     {
     	$html_Output = "<html><head><title>Anmeldung</title></head>";
     	$html_Output .= "<body>";

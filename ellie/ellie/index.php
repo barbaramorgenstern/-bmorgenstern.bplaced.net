@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Barbara Morgenstern</title>
+    <title>Modul 133</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,400i,500,700|Titillium+Web:600" rel="stylesheet">
     <link rel="stylesheet" href="view/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
@@ -19,7 +19,7 @@
                         <h1 class="m-0">
                             <a href="#">
 								<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-								    <title>Modul 133</title>
+								    <title>Ellie</title>
 								    <defs>
 								        <linearGradient x1="0%" y1="0%" y2="100%" id="logo-a">
 								            <stop stop-color="#4353FF" offset="0%"/>
@@ -54,15 +54,15 @@
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0 is-revealing">Formular</h1>
-	                        <p class="hero-paragraph is-revealing">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever. Do you want to get notified about it</p>
+	                        <h1 class="hero-title mt-0 is-revealing">Morgenstern Barbara</h1>
+	                        <p class="hero-paragraph is-revealing">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
 							<div class="hero-form field field-grouped is-revealing">
-								<div class="control control-expanded">
-									<form action="control/anmeldung.php">
-	                                	<input type="email" name="email" placeholder="Emailadresse&hellip;"/>
-										<input type="password" name="password" placeholder="Password" />
-  										<input type="submit" naem="btn_Submit" value="Log in" />
-									</form>
+	                            <div class="control control-expanded">
+								<form action="control/anmeldung.php">
+    								<input type="email" name="benutzer" placeholder="Email" />
+    								<input type="password" name="password" placeholder="Password" />
+    								<input type="submit" value="Log in" />
+  								</form>
 	                            </div>
 	                        </div>
 						</div>
@@ -459,6 +459,6 @@
             </div>
         </footer>
     </div>
-	<script src="control/js/index.js"></script>
+    <script src="control/js/main.min.js"></script>
 </body>
 </html>

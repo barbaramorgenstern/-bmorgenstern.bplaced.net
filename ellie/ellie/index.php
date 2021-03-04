@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 <body class="is-boxed">
+<span href="#" class="button" id="toggle-login">Log in</span>
     <div class="body-wrap boxed-container">
         <header class="site-header">
             <div class="container">
@@ -53,14 +54,15 @@
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0 is-revealing">Landing template for startups</h1>
+	                        <h1 class="hero-title mt-0 is-revealing">Formular</h1>
 	                        <p class="hero-paragraph is-revealing">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever. Do you want to get notified about it</p>
 							<div class="hero-form field field-grouped is-revealing">
-	                            <div class="control control-expanded">
-	                                <input class="input" type="email" name="email" placeholder="Your email please&hellip;">
-	                            </div>
-	                            <div class="control">
-	                                <a class="button button-primary button-block" href="#">Send</a>
+								<div class="control control-expanded">
+									<form action="control/anmeldung.php">
+	                                	<input type="email" name="email" placeholder="Emailadresse&hellip;"/>
+										<input type="password" name="password" placeholder="Password" />
+  										<input type="submit" naem="btn_Submit" value="Log in" />
+									</form>
 	                            </div>
 	                        </div>
 						</div>
@@ -457,7 +459,6 @@
             </div>
         </footer>
     </div>
-
-    <script src="control/js/main.min.js"></script>
+	<script src="control/js/index.js"></script>
 </body>
 </html>

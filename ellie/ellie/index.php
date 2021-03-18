@@ -55,7 +55,7 @@
                     <div class="hero-inner">
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0 is-revealing">Morgenstern Barbara</h1>
-	                        <p class="hero-paragraph is-revealing">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+	                        <p class="hero-paragraph is-revealing">Diese Webseite wurde im Rahmen vom Modul 133 erstellt.</p>
 							<div class="hero-form field field-grouped is-revealing">
 	                            <div class="control control-expanded">
 								<form action="control/anmeldung.php">
@@ -353,9 +353,9 @@
 											    </g>
 											</svg>
 		                                </div>
-		                                <h4 class="feature-title m-0">Discover</h4>
+		                                <h4 class="feature-title m-0">TBZ</h4>
 									</div>
-	                                <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design elements.</p>
+	                                <p class="text-sm mb-0">Technische Berufsschule Zuerich</p>
 	                            </div>
 	                        </div>
 							<div class="feature">
@@ -370,9 +370,9 @@
 											    </g>
 											</svg>
 		                                </div>
-		                                <h4 class="feature-title m-0">Discover</h4>
+		                                <h4 class="feature-title m-0">Lehre</h4>
 									</div>
-	                                <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design elements.</p>
+	                                <p class="text-sm mb-0">Betriebsinformatik</p>
 	                            </div>
 	                        </div>
 							<div class="feature">
@@ -389,9 +389,9 @@
 											    </g>
 											</svg>
 		                                </div>
-		                                <h4 class="feature-title m-0">Discover</h4>
+		                                <h4 class="feature-title m-0">Modul 133</h4>
 									</div>
-	                                <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design elements.</p>
+	                                <p class="text-sm mb-0">Web-Applikation mit Session-Handling realisieren</p>
 	                            </div>
 	                        </div>
 							<div>

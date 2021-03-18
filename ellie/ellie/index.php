@@ -457,7 +457,7 @@
 			</div>
             <div class="container">
                 <div class="site-footer-inner has-top-divider">
-                    <div class="footer-copyright">&copy; 2018 Ellie, all rights reserved</div>
+                    <div class="footer-copyright">&copy; 2021 Morgenstern, all rights reserved</div>
 					<ul class="footer-social-links list-reset">
 						<li>
 							<a href="#">

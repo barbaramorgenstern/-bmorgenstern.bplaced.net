@@ -394,6 +394,27 @@
 	                                <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design elements.</p>
 	                            </div>
 	                        </div>
+							<div>
+						 	<h1>
+	  						Kontaktformular
+	 		 				</h1>
+							  <form action="control/formularfelder.php" method="post" name="form1" id="form1" >
+								<label for="Vorname"><b>Vorname:</b></label><br>
+								<input type="text" id="Vorname" name="Vorname"><br><br>
+								
+								<label for="Nachname"><b>Nachname:</b></label><br>
+								<input type="text" id="Nachname" name="Nachname"><br><br>
+								
+								<label for="Email"><b>E-Mail:</b></label><br>
+								<input type="text" id="Email" name="Email"><br><br>
+								
+								<label for="Betreff"><b>Betreff:</b></label><br>
+								<input type="text" id="Betreff" name="Betreff"><br><br>
+								
+								<label for="Nachricht"><b>Nachricht:</b></label><br>
+								<textarea id="Nachricht" name="Nachricht" rows="10" cols="50"></textarea> <br><br>
+							</form>
+							</div>
 						</div>
                     </div>
                 </div>
@@ -412,6 +433,7 @@
 				    <path d="M384.557 116.012V305H0L210.643 0l173.914 116.012z" fill="url(#footer-bg)" fill-rule="evenodd"/>
 				</svg>
 			</div>
+			
 			<div class="footer-dots is-moving-object is-translating" data-translating-factor="160">
 				<svg width="69" height="91" xmlns="http://www.w3.org/2000/svg">
 				    <g fill="#43F1FF" fill-rule="evenodd">

@@ -8,8 +8,8 @@ $empfaenger = "moba.morgenstern@gmail.com"; //Empfänger-Adresse
 $mail_cc = ""; //CC-Adresse, diese E-Mail-Adresse bekommt einer weitere Kopie
 $betreff = "Neue Kontaktanfrage"; //Betreff der Email
  
-$url_ok = "control/ok.php"; //Zielseite, wenn E-Mail erfolgreich versendet wurde
-$url_fehler = "control/fehler.php"; //Zielseite, wenn E-Mail nicht gesendet werden konnte
+$url_ok = "..control/ok.php"; //Zielseite, wenn E-Mail erfolgreich versendet wurde
+$url_fehler = "..control/fehler.php"; //Zielseite, wenn E-Mail nicht gesendet werden konnte
  
  
 //Diese Felder werden nicht in der Mail stehen

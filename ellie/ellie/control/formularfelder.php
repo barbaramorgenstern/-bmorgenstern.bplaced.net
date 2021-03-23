@@ -5,12 +5,8 @@ $sendermail_antwort = false;      //E-Mail Adresse des Besuchers als Absender. f
 $name_von_emailfeld = "email";   //Feld in der die Absenderadresse steht
  
 $empfaenger = $_POST['email']; //Empfänger-Adresse
+$mail_cc = ""; //CC-Adresse, diese E-Mail-Adresse bekommt einer weitere Kopie
 $betreff = "Kontaktanfrage"; //Betreff der Email
-$vorname = $_POST['vorname'];
-$nachname = $_POST['nachname'];
-$betreff = $_POST['betreff'];
-$nachricht = $_POST['nachricht'];
-
  
 $url_ok = "ok.php"; //Zielseite, wenn E-Mail erfolgreich versendet wurde
 $url_fehler = "fehler.php"; //Zielseite, wenn E-Mail nicht gesendet werden konnte
@@ -19,7 +15,7 @@ $url_fehler = "fehler.php"; //Zielseite, wenn E-Mail nicht gesendet werden konnt
  
  
 //Diese Felder werden nicht in der Mail stehen
-//$ignore_fields = array('submit');
+$ignore_fields = $POST_['submit'];
  
  
  
@@ -38,8 +34,8 @@ $msg = ":: Gesendet am $tag, den $n.$monat.$jahr - $time Uhr ::\n\n";
  
 //Hier werden alle Eingabefelder abgefragt
 foreach($_POST as $nachname => $value) {
-   if (in_array($nachname)) {
-        continue; //Ignore Felder wird nicht in die Mail eingefügt
+   if (in_array($nachname, $ignore_fields)) {
+        continue; //Ignore Felder wird übersprunge und nicht in die Mail eingefügt
    }
    else
    {

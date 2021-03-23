@@ -18,8 +18,6 @@ $url_fehler = "fehler.php"; //Zielseite, wenn E-Mail nicht gesendet werden konnt
 $ignore_fields = array("submit");
  
  
- 
- 
 //Datum, wann die Mail erstellt wurde
 $name_tag = array("Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag");
 $num_tag = date("w");
@@ -37,7 +35,7 @@ foreach($_POST as $vorname => $value) {
    if (in_array($vorname, $ignore_fields)) {
         continue; //Ignore Felder wird nicht in die Mail eingefügt
    }
-   $msg .= "::: $name :::\n$value\n\n";
+   $msg .= "::: $vorname :::\n$value\n\n";
 }
  
  

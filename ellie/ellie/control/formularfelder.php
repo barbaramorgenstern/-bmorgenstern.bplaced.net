@@ -40,7 +40,7 @@ foreach($_POST as $nachname => $value) {
    }
    else
    {
-      $msg .= "::: $nachname :::\n$value\n\n", "::: $vorname :::\n$value\n\n", "::: $email :::\n$value\n\n", "::: $betreff :::\n$value\n\n", "::: $nachricht :::\n$value\n\n";
+      $msg .= "::: $nachname :::\n$value\n\n";
    }
 }
  

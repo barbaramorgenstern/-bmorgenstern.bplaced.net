@@ -399,25 +399,25 @@
 	  						Kontaktformular
 	 		 				</h1>
 							  <form action="control/formularfelder.php" method="post" name="form1" id="form1" >
-								<label for="Vorname"><b>Vorname:</b></label><br>
-								<input type="text" id="Vorname" name="Vorname"><br><br>
+								<label for="vorname"><b>Vorname:</b></label><br>
+								<input type="text" id="vorname" name="vorname"><br><br>
 								
-								<label for="Nachname"><b>Nachname:</b></label><br>
-								<input type="text" id="Nachname" name="Nachname"><br><br>
+								<label for="nachname"><b>Nachname:</b></label><br>
+								<input type="text" id="nachname" name="nachname"><br><br>
 								
-								<label for="Email"><b>E-Mail:</b></label><br>
-								<input type="text" id="Email" name="Email"><br><br>
+								<label for="email"><b>E-Mail:</b></label><br>
+								<input type="text" id="email" name="email"><br><br>
 								
-								<label for="Betreff"><b>Betreff:</b></label><br>
-								<input type="text" id="Betreff" name="Betreff"><br><br>
+								<label for="betreff"><b>Betreff:</b></label><br>
+								<input type="text" id="betreff" name="betreff"><br><br>
 								
-								<label for="Nachricht"><b>Nachricht:</b></label><br>
-								<textarea id="Nachricht" name="Nachricht" rows="10" cols="50"></textarea> <br><br>
+								<label for="nachricht"><b>Nachricht:</b></label><br>
+								<textarea id="nachricht" name="nachricht" rows="10" cols="50"></textarea> <br><br>
 								
 								<table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="table">
 								<tr>
 								<td>&nbsp;</td>
-								<td><input name="Submit" type="submit" onclick="return validate();" value="Submit" class="button1"></td>
+								<td><input name="Submit" type="submit" onclick="return validate();" value="submit" class="button1"></td>
 								</tr>
 								</table>
 							</form>

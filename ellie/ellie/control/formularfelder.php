@@ -35,7 +35,7 @@ $msg = ":: Gesendet am $tag, den $n.$monat.$jahr - $time Uhr ::\n\n";
  
 //Hier werden alle Eingabefelder abgefragt
 foreach($_POST as $nachname => $value) {
-   if (in_array($nachname, $vorname)) {
+   if (in_array($nachname, $ignore_fields)) {
         continue; //Ignore Felder wird nicht in die Mail eingefügt
    }
    else

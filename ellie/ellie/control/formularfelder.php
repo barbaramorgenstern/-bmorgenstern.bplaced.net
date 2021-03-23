@@ -5,7 +5,7 @@ $sendermail_antwort = true;      //E-Mail Adresse des Besuchers als Absender. fa
 $name_von_emailfeld = "Email";   //Feld in der die Absenderadresse steht
  
 //$empfaenger = "moba.morgenstern@gmail.com"; //Empfänger-Adresse
-$empfaenger = $_GET['Email'];; //Empfänger-Adresse
+$empfaenger = $_POST['Email'];; //Empfänger-Adresse
 
 
 $mail_cc = ""; //CC-Adresse, diese E-Mail-Adresse bekommt einer weitere Kopie

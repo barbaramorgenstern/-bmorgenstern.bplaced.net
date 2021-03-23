@@ -15,7 +15,7 @@ $url_fehler = "fehler.php"; //Zielseite, wenn E-Mail nicht gesendet werden konnt
  
  
 //Diese Felder werden nicht in der Mail stehen
-$ignore_fields = $POST_['submit'];
+$ignore_fields = array['submit'];
  
  
  

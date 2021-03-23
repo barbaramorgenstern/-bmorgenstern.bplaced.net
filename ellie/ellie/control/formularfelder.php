@@ -4,19 +4,22 @@ $email_from = "absender@domain.de";   //Absender falls keiner angegeben wurde
 $sendermail_antwort = false;      //E-Mail Adresse des Besuchers als Absender. false= Nein ; true = Ja
 $name_von_emailfeld = "email";   //Feld in der die Absenderadresse steht
  
-//$empfaenger = "moba.morgenstern@gmail.com"; //Empfänger-Adresse
-$empfaenger = $_POST['email'];; //Empfänger-Adresse
+$empfaenger = $_POST['email']; //Empfänger-Adresse
+$betreff = "Kontaktanfrage"; //Betreff der Email
+$vorname = $_POST['vorname'];
+$nachname = $_POST['nachname'];
+$betreff = $_POST['betreff'];
+$nachricht = $_POST['nachricht'];
 
-
-$mail_cc = ""; //CC-Adresse, diese E-Mail-Adresse bekommt einer weitere Kopie
-$betreff = "Neue Kontaktanfrage"; //Betreff der Email
  
 $url_ok = "ok.php"; //Zielseite, wenn E-Mail erfolgreich versendet wurde
 $url_fehler = "fehler.php"; //Zielseite, wenn E-Mail nicht gesendet werden konnte
  
  
+ 
+ 
 //Diese Felder werden nicht in der Mail stehen
-$ignore_fields = array('submit');
+//$ignore_fields = array('submit');
  
  
  
@@ -35,7 +38,7 @@ $msg = ":: Gesendet am $tag, den $n.$monat.$jahr - $time Uhr ::\n\n";
  
 //Hier werden alle Eingabefelder abgefragt
 foreach($_POST as $nachname => $value) {
-   if (in_array($nachname, $ignore_fields)) {
+   if (in_array($nachname)) {
         continue; //Ignore Felder wird nicht in die Mail eingefügt
    }
    else

@@ -33,14 +33,11 @@ $time = date("H:i");
 $msg = ":: Gesendet am $tag, den $n.$monat.$jahr - $time Uhr ::\n\n";
  
 //Hier werden alle Eingabefelder abgefragt
-foreach($_POST as $nachname => $value) {
-   if (in_array($nachname, $ignore_fields)) {
-        continue; //Ignore Felder wird übersprunge und nicht in die Mail eingefügt
+foreach($_POST as $vorname => $value) {
+   if (in_array($vorname, $ignore_fields)) {
+        continue; //Ignore Felder wird nicht in die Mail eingefügt
    }
-   else
-   {
-      $msg .= "::: $nachname :::\n$value\n\n";
-   }
+   $msg .= "::: $name :::\n$value\n\n";
 }
  
  

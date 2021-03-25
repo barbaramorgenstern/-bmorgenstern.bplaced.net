@@ -13,16 +13,16 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$database = "db_compterservice";
+$database = "db_computerservice";
 if ($_SERVER["SERVER_NAME"] == "haraldmueller.ch") {
     $host = "localhost";
     $user = "root";
     $pass = "";
-    $database = "db_compterservice";
-} elseif ($_SERVER["SERVER_NAME"] == "haraldmueller.bplaced.net") {
+    $database = "db_computerservice";
+} elseif ($_SERVER["SERVER_NAME"] == "bmorgenstern.bplaced.net") {
     $host = "localhost";
-    $user = "haraldmueller_compterservice";
-    $pass = "db_compterservice";
+    $user = "bmorgenstern_computerservice";
+    $pass = "db_computerservice";
     $database = "haraldmueller";
 }
 //SQL-Befehle

@@ -9,7 +9,7 @@
     	$html_Output = "<html><head><title>Anmeldung</title></head>";
     	$html_Output .= "<body>";
     	$html_Output .= "Hallo, ".$_SESSION["benutzer"]." die Anmeldung war erfolgreich.";
-    	$html_Output .= "<a href=../abmeldung.php>abmelden</a>";
+    	$html_Output .= "<a href=abmeldung.php>abmelden</a>";
     	$html_Output .= "</body></html>";
     }
     else

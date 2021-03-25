@@ -59,7 +59,7 @@
 	                        <p class="hero-paragraph is-revealing">Diese Webseite wurde im Rahmen vom Modul 133 erstellt.</p>
 							<div class="hero-form field field-grouped is-revealing">
 	                            <div class="control control-expanded">
-								<form action="anmeldung.php">
+								<form action="control/anmeldung.php">
     								<input type="email" name="benutzer" placeholder="Email" />
     								<input type="password" name="password" placeholder="Password" />
     								<input type="submit" value="Log in" />

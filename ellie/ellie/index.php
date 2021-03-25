@@ -10,8 +10,8 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 <body class="is-boxed">
-<span href="#" class="button" id="toggle-login">Log in</span>
-<a href="dbzugriffe.php" class="button" id="Datenbank">Datenbank</a>
+<span href="index.php" class="button" id="toggle-login">Log in</span>
+<a href="model/dbzugriffe.php" class="button" id="Datenbank">Datenbank</a>
     <div class="body-wrap boxed-container">
         <header class="site-header">
             <div class="container">

@@ -93,8 +93,13 @@ if (isset($_REQUEST["addRow"])) {   //das lassen
     echo $_REQUEST["addRow"];       //nur zu check --> kann man löschen
 }
 if (isset($_REQUEST["delRow"])) {   //das lassen
+    $sql = "DELETE FROM t_arbeitsstunden WHERE astd_id=".$_REQUEST["delRow"];
+    $sqliConn = new mysqli($host, $user, $pass, $database);
+    $count = $sqliConn->query($sql);
+    $sqliConn->close();
     echo "Del ";                    //nur zu check --> kann man löschen
     echo $_REQUEST["delRow"];       //nur zu check --> kann man löschen
+    echo $sql;
 }
 if (isset($_REQUEST["editRow"])) {  //das lassen
     $displayAddButton = FALSE;      //das lassen
@@ -216,14 +221,14 @@ function getInputFields($sql, $host, $database, $user, $pass) {
 		<title>TBZ M133, DB-Zugriffe</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="view/css/view_css_main.css" />
+		<link rel="stylesheet" href="../view/css/view_css_main.css" />
 	</head>
 	<body>
 		<div id="wrapper">
-			<a href="db-ressourcen/t_arbeitsstunden.sql" target="_blank">db-ressourcen/t_arbeitsstunden.sql</a> &nbsp; | &nbsp;
+            <a href=../index.php>Startseite</a> &nbsp; | &nbsp;
 			<a href="https://gitlab.com/harald.mueller/m133-tag6" target="_blank">https://gitlab.com/harald.mueller/m133-tag6</a> &nbsp; | &nbsp;
-            <a href="view/css/main.css" target="_blank">view/css/main.css</a> 
-            <h1>TBZ M133 Demo für DB-Zugriffe</h1>
+            <a href="../view/css/main.css" target="_blank">view/css/main.css</a> 
+            <h1>TBZ M133 DB-Zugriffe</h1>
             <form action="#" method="post">
             	<table>
             		<tr>

@@ -14,7 +14,7 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $database = "db_computerservice";
-if ($_SERVER["SERVER_NAME"] == "haraldmueller.ch") {
+if ($_SERVER["SERVER_NAME"] == "bmorgenstern.ch") {
     $host = "localhost";
     $user = "root";
     $pass = "";
@@ -23,7 +23,7 @@ if ($_SERVER["SERVER_NAME"] == "haraldmueller.ch") {
     $host = "localhost";
     $user = "bmorgenstern_computerservice";
     $pass = "db_computerservice";
-    $database = "haraldmueller";
+    $database = "bmorgenstern";
 }
 //SQL-Befehle
 $sqlSelect = "SELECT * FROM t_arbeitsstunden ORDER BY astd_datum DESC;";

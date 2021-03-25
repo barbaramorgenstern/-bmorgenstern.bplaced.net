@@ -417,7 +417,7 @@
 								<table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="table">
 								<tr>
 								<td>&nbsp;</td>
-								<td><input name="submit" type="submit" onclick="return validate();" value="submit" class="button1"></td>
+								<td><input name="Submit" type="submit" onclick="return validate();" value="submit" class="button1"></td>
 								</tr>
 								</table>
 							</form>

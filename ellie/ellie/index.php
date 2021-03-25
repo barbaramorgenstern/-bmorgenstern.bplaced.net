@@ -58,7 +58,7 @@
 	                        <p class="hero-paragraph is-revealing">Diese Webseite wurde im Rahmen vom Modul 133 erstellt.</p>
 							<div class="hero-form field field-grouped is-revealing">
 	                            <div class="control control-expanded">
-								<form action="control/anmeldung.php">
+								<form action="anmeldung.php">
     								<input type="email" name="benutzer" placeholder="Email" />
     								<input type="password" name="password" placeholder="Password" />
     								<input type="submit" value="Log in" />
@@ -417,7 +417,7 @@
 								<table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="table">
 								<tr>
 								<td>&nbsp;</td>
-								<td><input name="submit" type="submit" onclick="return validate();" value="submit" class="button1"></td>
+								<td><input name="submit" type="submit" onclick="return validate();" value="Submit" class="button1"></td>
 								</tr>
 								</table>
 							</form>

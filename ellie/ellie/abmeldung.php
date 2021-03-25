@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php 
   session_start();
   unset($_SESSION['benutzer']) ;
@@ -5,6 +6,6 @@
   echo "Benutzer erfolgreich abgemeldet.";
 ?>
 
-
+<input type="button" name="back" value="Zurück" onClick="index.php" />
 
 

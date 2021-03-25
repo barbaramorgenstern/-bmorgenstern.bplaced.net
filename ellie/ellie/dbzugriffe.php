@@ -213,7 +213,7 @@ function getInputFields($sql, $host, $database, $user, $pass) {
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>TBZ M133, Demo für DB-Zugriffe</title>
+		<title>TBZ M133, DB-Zugriffe</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="view/css/view_css_main.css" />

@@ -11,7 +11,7 @@
 </head>
 <body class="is-boxed">
 <span href="#" class="button" id="toggle-login">Log in</span>
-<a href="demo_dbzugriffe.php" class="button" id="Datenbank">Datenbank</a>
+<a href="dbzugriffe.php" class="button" id="Datenbank">Datenbank</a>
     <div class="body-wrap boxed-container">
         <header class="site-header">
             <div class="container">

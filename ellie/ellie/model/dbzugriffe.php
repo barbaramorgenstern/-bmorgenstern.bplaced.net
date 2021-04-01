@@ -26,23 +26,13 @@ if (isset($_REQUEST["btnSave"])) {
     if ($_REQUEST["sqlModus"] == "INSERT") {
         $sql = "INSERT INTO t_arbeitsstunden
                     (astd_datum 
-                    ,astd_pers_krzl 
-                    ,astd_proj_krzl 
-                    ,astd_tarif_krzl 
-                    ,astd_stdzahl
-                    ,astd_arbeitsbeschreibung)
+                    ,astd_pers 
+                    ,astd_servicebeschreibung)
                 VALUES 
                     ('".$_REQUEST["date"]."'
                     ,'".$_REQUEST["pers"]."'
-                    ,'".$_REQUEST["proj"]."'
-                    ,'".$_REQUEST["tarif"]."'
-                    ,'".$_REQUEST["zeit"]."'
                     ,'".$_REQUEST["beschr"]."'
                     )";
-        //Variante PDO
-//         $pdo = new PDO("mysql:host=".$host.";dbname=".$database, $user, $pass);
-//         $count = $pdo->exec($sql);
-//         $pdo = null;//Datenbank schliessen (ist zwar nett, muss aber nicht sein, sie schliesst sich nach Timeout alleine)
         
         //Variante MySQLi
         $sqliConn = new mysqli($host, $user, $pass, $database);
@@ -55,16 +45,9 @@ if (isset($_REQUEST["btnSave"])) {
     if ($_REQUEST["sqlModus"] == "UPDATE") {
         $sql = "UPDATE t_arbeitsstunden 
                 SET astd_datum = '".$_REQUEST["date"]."' 
-                   ,astd_pers_krzl = '".$_REQUEST["pers"]."' 
-                   ,astd_proj_krzl = '".$_REQUEST["proj"]."' 
-                   ,astd_tarif_krzl = '".$_REQUEST["tarif"]."' 
-                   ,astd_stdzahl = '".$_REQUEST["zeit"]."' 
-                   ,astd_arbeitsbeschreibung = '".$_REQUEST["beschr"]."' 
+                   ,astd_pers = '".$_REQUEST["pers"]."' 
+                   ,astd_servicebeschreibung = '".$_REQUEST["beschr"]."' 
                 WHERE astd_id = ".$_REQUEST["rowID"]." ;";
-        //Variante PDO
-//         $pdo = new PDO("mysql:host=".$host.";dbname=".$database, $user, $pass);
-//         $count = $pdo->exec($sql);
-//         $pdo = null;//Datenbank schliessen (ist zwar nett, muss aber nicht sein, sie schliesst sich nach Timeout alleine)
         
         //Variante MySQLi
         $sqliConn = new mysqli($host, $user, $pass, $database);
@@ -110,17 +93,12 @@ function getList($sql, $host, $database, $user, $pass) {
         $key = $_REQUEST["editRow"];
     }
     
-    //Variante PDO
-    $pdo = new PDO("mysql:host=".$host.";dbname=".$database, $user, $pass);
-    $resultSet = $pdo->query($sql);
-    //$pdo = null;
-    foreach ($resultSet as $row) {
     
     //Variante MySQLi
-//     $sqliConn = new mysqli($host, $user, $pass, $database);
-//     $resultSet = $sqliConn->query($sql);
-//     $sqliConn->close();
-//     while($row = $resultSet->fetch_assoc()) {
+     $sqliConn = new mysqli($host, $user, $pass, $database);
+     $resultSet = $sqliConn->query($sql);
+     $sqliConn->close();
+     while($row = $resultSet->fetch_assoc()) {
         
         $out .= "<tr>";
         //Entfernt die Buttons im Update- oder Insert-Modus
@@ -135,11 +113,8 @@ function getList($sql, $host, $database, $user, $pass) {
             $out .= "     <button name='editRow' value='".$row['astd_id']."'>EDT</button></td>";
         }
         $out .= " <td>".$row['astd_datum']."</td>";
-        $out .= " <td>".$row['astd_pers_krzl']."</td>";
-        $out .= " <td>".$row['astd_proj_krzl']."</td>";
-        $out .= " <td>".$row['astd_tarif_krzl']."</td>";
-        $out .= " <td>".$row['astd_stdzahl']."</td>";
-        $out .= " <td>".$row['astd_arbeitsbeschreibung']."</td>";
+        $out .= " <td>".$row['astd_pers']."</td>";
+        $out .= " <td>".$row['astd_servicebeschreibung']."</td>";
         $out .= "</tr>";
     }
     return $out;
@@ -160,11 +135,6 @@ function getInputFields($sql, $host, $database, $user, $pass) {
         //Setzt die Id in den SQL-Command ein
         $sql = str_replace("__ID__", $key, $sql);
                 
-        //Variante PDO
-		// $pdo = new PDO("mysql:host=".$host.";dbname=".$database, $user, $pass);
-		// $resultSet = $pdo->query($sql);
-		// $pdo = null;//Datenbank schliessen (ist zwar nett, muss aber nicht sein, sie schliesst sich nach Timeout alleine)
-		// foreach ($resultSet as $row) {
 
         //Variante MySQLi
         $sqliConn = new mysqli($host, $user, $pass, $database);
@@ -173,11 +143,8 @@ function getInputFields($sql, $host, $database, $user, $pass) {
         while($row = $resultSet->fetch_assoc()) {
             
             $date   = $row['astd_datum'];
-            $pers   = $row['astd_pers_krzl'];
-            $proj   = $row['astd_proj_krzl'];
-            $tarif  = $row['astd_tarif_krzl'];
-            $zeit   = $row['astd_stdzahl'];
-            $beschr = $row['astd_arbeitsbeschreibung'];
+            $pers   = $row['astd_pers'];
+            $beschr = $row['astd_servicebeschreibung'];
             break;
         }
     }
@@ -185,12 +152,9 @@ function getInputFields($sql, $host, $database, $user, $pass) {
     //Bei INSERT sind die Felder leer, bei EDIT werden sie mit der DB-Inhalt gefüllt
     $out .= "<tr>"; 
     $out .= " <td><button name='btnSave'>OK</button></td>";
-    $out .= " <td><input type='date' name='date'   value='".$date."'   placeholder='2019-06-21' style='width: 11em;'></td>";
-    $out .= " <td><input type='text' name='pers'   value='".$pers."'   placeholder='MUH'        style='width: 5em;'></td>";
-    $out .= " <td><input type='text' name='proj'   value='".$proj."'   placeholder='TBZ-IT'     style='width: 5em;'></td>";
-    $out .= " <td><input type='text' name='tarif'  value='".$tarif."'  placeholder='BK'         style='width: 5em;'></td>";
-    $out .= " <td><input type='text' name='zeit'   value='".$zeit."'   placeholder='4.0'        style='width: 5em;'></td>";
-    $out .= " <td><input type='text' name='beschr' value='".$beschr."' placeholder='Ein Text'   style='width: 20em;'></td>";
+    $out .= " <td><input type='date' name='date'   value='".$date."'   placeholder='2021-06-21' style='width: 11em;'></td>";
+    $out .= " <td><input type='text' name='pers'   value='".$pers."'   placeholder='Vorname Nachname'        style='width: 20em;'></td>";
+    $out .= " <td><input type='text' name='beschr' value='".$beschr."' placeholder='Service Beschreibung'   style='width: 50em;'></td>";
     $out .= "</tr>";
     $out .= "<tr>";
     if (isset($_REQUEST["addRow"])) {
@@ -208,17 +172,15 @@ function getInputFields($sql, $host, $database, $user, $pass) {
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>TBZ M133, DB-Zugriffe</title>
+		<title>Serviceanfragen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../view/css/view_css_main.css" />
+		<link rel="stylesheet" href="../view/css/css_main.css" />
 	</head>
 	<body>
 		<div id="wrapper">
-            <a href=../index.php>Startseite</a> &nbsp; | &nbsp;
-			<a href="https://gitlab.com/harald.mueller/m133-tag6" target="_blank">https://gitlab.com/harald.mueller/m133-tag6</a> &nbsp; | &nbsp;
-            <a href="../view/css/main.css" target="_blank">view/css/main.css</a> 
-            <h1>TBZ M133 DB-Zugriffe</h1>
+        &nbsp; | &nbsp; <a href=../index.php>Startseite</a> &nbsp; | &nbsp;
+            <h1>Serviceanfragen</h1>
             <form action="dbzugriffe.php" method="post">
             	<table>
             		<tr>
@@ -230,12 +192,9 @@ function getInputFields($sql, $host, $database, $user, $pass) {
             			?>            				 
             				<button name='cancel'>C</button>
             			</th>
-            			<th>Datum</th>
-            			<th>MA</th>
-            			<th>Projekt</th>
-            			<th>Tarif</th>
-            			<th>Std.</th>
-            			<th>Arbeitsbeschreibung</th>
+            			<th>Datum der Meldung</th>
+            			<th>Kunde</th>
+            			<th>Serviceschreibung</th>
             		</tr>
             		<?= getInputFields($sqlSelWhr, $host, $database, $user, $pass); ?>
             		<?= getList($sqlSelect, $host, $database, $user, $pass); ?>

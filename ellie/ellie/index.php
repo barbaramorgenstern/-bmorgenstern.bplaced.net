@@ -55,8 +55,8 @@
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0 is-revealing">Morgenstern Barbara</h1>
-	                        <p class="hero-paragraph is-revealing">Diese Webseite wurde im Rahmen vom Modul 133 erstellt.</p>
+	                        <h1 class="hero-title mt-0 is-revealing">Computer Services</h1>
+	                        <p class="hero-paragraph is-revealing">Brauchen Sie unterstützung bei einem IT Problem? Dann melden Sie sich direkt hier:</p>
 							<div class="hero-form field field-grouped is-revealing">
 	                            <div class="control control-expanded">
 								<form action="control/anmeldung.php">

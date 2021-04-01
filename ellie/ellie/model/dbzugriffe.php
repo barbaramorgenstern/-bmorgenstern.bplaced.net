@@ -1,14 +1,4 @@
 <?php
-/**
- * Schulungsbeispiel für Datenbankzugriffe und Tabellenverwaltung in PHP
- * Harald G. Müller, TBZ, 2019
- * 
- * In diesem Beispiel ist die Delete-Funktion bewusst noch nicht implementiert.
- * AUFGABEN:
- * - Bringen Sie den Code zuerst zum Laufen, indem Sie die Datenbank und die entsprechende Tabelle anlegen (SQL-Code siehe unten)
- * - Analysieren Sie den ganzen Code und fügen Sie dann das DELETE an der geeigneten Stelle hinzu.
- * - Stellen Sie von PDO nach MySQLi oder von MySQLi nach PDO um.
- */
 // Datenbank-Zugangsdaten, werden hier flexibel gesetzt
 $host = "localhost";
 $user = "root";
@@ -229,7 +219,7 @@ function getInputFields($sql, $host, $database, $user, $pass) {
 			<a href="https://gitlab.com/harald.mueller/m133-tag6" target="_blank">https://gitlab.com/harald.mueller/m133-tag6</a> &nbsp; | &nbsp;
             <a href="../view/css/main.css" target="_blank">view/css/main.css</a> 
             <h1>TBZ M133 DB-Zugriffe</h1>
-            <form action="#" method="post">
+            <form action="dbzugriffe.php" method="post">
             	<table>
             		<tr>
             			<th>
@@ -254,39 +244,3 @@ function getInputFields($sql, $host, $database, $user, $pass) {
 		</div>
 	</body>
 </html>
-
-<?php 
-/*
--- SQL Code für die Datenbank- und Tabellenerstellung in MySQL/MariaDB
--- (über SQL-Eingabefenster in die DB einfügen)
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-CREATE DATABASE IF NOT EXISTS `db_m133`;
-USE `db_m133`;
-
-DROP TABLE IF EXISTS `t_arbeitsstunden`;
-CREATE TABLE IF NOT EXISTS `t_arbeitsstunden` (
-  `astd_id` int(11) NOT NULL,
-  `astd_pers_krzl` varchar(8) NOT NULL,
-  `astd_proj_krzl` varchar(8) NOT NULL,
-  `astd_datum` date NOT NULL,
-  `astd_tarif_krzl` varchar(8) NOT NULL,
-  `astd_stdzahl` float NOT NULL,
-  `astd_arbeitsbeschreibung` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-INSERT INTO `t_arbeitsstunden` (`astd_id`, `astd_pers_krzl`, `astd_proj_krzl`, `astd_datum`, `astd_tarif_krzl`, `astd_stdzahl`, `astd_arbeitsbeschreibung`) VALUES
-(1, 'MUH', 'TBZ-IT', '2019-04-22', 'BK', 4, 'Berufskunde-Unterricht M133 Klasse BI16c'),
-(2, 'MUH', 'TBZ-IT', '2019-04-23', 'ABU', 3, 'Unterricht ABU Klasse BI16c');
-
-ALTER TABLE `t_arbeitsstunden`
-  ADD PRIMARY KEY (`astd_id`);
--- AUTO_INCREMENT für Tabelle `t_arbeitsstunden`
-ALTER TABLE `t_arbeitsstunden`
-  MODIFY `astd_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
-
-*/ ?>

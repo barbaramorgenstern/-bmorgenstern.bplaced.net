@@ -9,8 +9,9 @@
     	$html_Output = "<html><head><title>Anmeldung</title></head>";
     	$html_Output .= "<body>";
     	$html_Output .= "Hallo, ".$_SESSION["benutzer"]." die Anmeldung war erfolgreich.";
-    	$html_Output .= "<a href=abmeldung.php>abmelden</a>";
+    	$html_Output .= "<a href=abmeldung.php>abmelden</a><br>";
     	$html_Output .= "</body></html>";
+		$html_Output .= "<a href=../model/dbzugriffe.php>weiter zur Service Seite</a>";
     }
     else
     {
@@ -19,7 +20,6 @@
     	$html_Output .= "Hallo, die Anmeldung war nicht erfolgreich.";
     	$html_Output .= "</body></html>";    	
     }
-
 
 	echo $html_Output;
 ?>

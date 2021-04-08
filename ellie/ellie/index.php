@@ -16,8 +16,6 @@
 	</script>
 </head>
 <body class="is-boxed">
-<span href="index.php" class="button" id="toggle-login">Log in</span>
-<a href="model/dbzugriffe.php" class="button" id="Datenbank">Datenbank</a>
     <div class="body-wrap boxed-container">
         <header class="site-header">
             <div class="container">

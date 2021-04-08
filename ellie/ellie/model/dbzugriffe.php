@@ -3,28 +3,23 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$database = "db_computerservice";
-if ($_SERVER["SERVER_NAME"] == "bmorgenstern.ch") {
+$database = "bmorgenstern_dbcomputerservice";
+if ($_SERVER["SERVER_NAME"] == "bmorgenstern.bplaced.net") {
     $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $database = "db_computerservice";
-} elseif ($_SERVER["SERVER_NAME"] == "bmorgenstern.bplaced.net") {
-    $host = "localhost";
-    $user = "bmorgenstern_computerservice";
-    $pass = "db_computerservice";
-    $database = "bmorgenstern";
+    $user = "bmorgenstern_moba";
+    $pass = "1234";
+    $database = "bmorgenstern_dbcomputerservice";
 }
 //SQL-Befehle
-$sqlSelect = "SELECT * FROM t_arbeitsstunden ORDER BY astd_datum DESC;";
-$sqlSelWhr = "SELECT * FROM t_arbeitsstunden WHERE astd_id = __ID__ ;";
+$sqlSelect = "SELECT * FROM t_computerservice ORDER BY astd_datum DESC;";
+$sqlSelWhr = "SELECT * FROM t_computerservice WHERE astd_id = __ID__ ;";
 
 if (isset($_REQUEST["btnSave"])) {
 //     echo "<pre>save ".$_REQUEST["sqlModus"];
 //     echo print_r($_REQUEST, TRUE);
     $sql = "";
     if ($_REQUEST["sqlModus"] == "INSERT") {
-        $sql = "INSERT INTO t_arbeitsstunden
+        $sql = "INSERT INTO t_computerservice
                     (astd_datum 
                     ,astd_pers 
                     ,astd_servicebeschreibung)
@@ -43,7 +38,7 @@ if (isset($_REQUEST["btnSave"])) {
         echo $count." row inserted";//freiwillige Ausgabe -> kann gelöscht werden
     }
     if ($_REQUEST["sqlModus"] == "UPDATE") {
-        $sql = "UPDATE t_arbeitsstunden 
+        $sql = "UPDATE t_computerservice 
                 SET astd_datum = '".$_REQUEST["date"]."' 
                    ,astd_pers = '".$_REQUEST["pers"]."' 
                    ,astd_servicebeschreibung = '".$_REQUEST["beschr"]."' 
@@ -66,7 +61,7 @@ if (isset($_REQUEST["addRow"])) {   //das lassen
     echo $_REQUEST["addRow"];       //nur zu check --> kann man löschen
 }
 if (isset($_REQUEST["delRow"])) {   //das lassen
-    $sql = "DELETE FROM t_arbeitsstunden WHERE astd_id=".$_REQUEST["delRow"];
+    $sql = "DELETE FROM t_computerservice WHERE astd_id=".$_REQUEST["delRow"];
     $sqliConn = new mysqli($host, $user, $pass, $database);
     $count = $sqliConn->query($sql);
     $sqliConn->close();

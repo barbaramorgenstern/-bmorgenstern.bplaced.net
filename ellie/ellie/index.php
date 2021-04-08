@@ -8,6 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,400i,500,700|Titillium+Web:600" rel="stylesheet">
     <link rel="stylesheet" href="view/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script> <!-- reCAPTCHA v3 laden -->
+	<script> <!-- Callback Funktion von reCAPTCHA v3 -->
+	function onSubmit(token) {
+		document.getElementById("form1").submit();
+	}
+	</script>
 </head>
 <body class="is-boxed">
 <span href="index.php" class="button" id="toggle-login">Log in</span>
@@ -417,8 +423,8 @@
 								
 								<table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="table">
 								<tr>
-								<td>&nbsp;</td>
-								<td><input name="submit" type="submit" onclick="return validate();" value="Submit" class="button1"></td>
+								<td>&nbsp;</td> <!-- return validate();-->
+								<td><button name="g-recaptcha" onclick="" value="Submit" class="button1 g-recaptcha" data-sitekey="6Lfw9p4aAAAAANKwx8ADOxot6v6Odkr2PmGrZDwH" data-callback='onSubmit' data-action='submit'>Submit</button></td>
 								</tr>
 								</table>
 							</form>

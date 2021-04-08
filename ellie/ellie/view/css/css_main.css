@@ -63,6 +63,7 @@ input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:ac
 	color: #53e3fb;
 }
 
+
 input[type="submit"].icon:before, input[type="reset"].icon:before, input[type="button"].icon:before,
 	button.icon:before, .button.icon:before {
 	margin-right: 0.5em;

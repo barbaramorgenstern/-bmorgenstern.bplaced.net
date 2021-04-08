@@ -175,6 +175,7 @@ function getInputFields($sql, $host, $database, $user, $pass) {
 	<body>
 		<div id="wrapper">
         &nbsp; | &nbsp; <a href=../index.php>Startseite</a> &nbsp; | &nbsp;
+        <a href=../control/abmeldung.php>abmelden</a><br> &nbsp; | &nbsp; 
             <h1>Serviceanfragen</h1>
             <form action="dbzugriffe.php" method="post">
             	<table>

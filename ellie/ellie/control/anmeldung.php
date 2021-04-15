@@ -2,30 +2,26 @@
   session_start();
     $_SESSION['email'] = htmlspecialchars( $_REQUEST['email']);
     $_SESSION['password'] = htmlspecialchars( $_REQUEST['password']);
-
-// Pr�fe Inhalt von Eingabe  
-    if ((strlen($_SESSION['email'])>0)and (strlen($_SESSION['password'])>0))
-    {
-    	$html_Output = "<html><head><title>Anmeldung</title></head>";
-    	$html_Output .= "<body>";
-    	$html_Output .= "Hallo, die Anmeldung war erfolgreich, weiter zur ";
-		$html_Output .= "<a href=../model/dbzugriffe.php>Service Seite.</a>";
-    	$html_Output .= "</body></html>";
-
-    }
-    else
-    {
-    	$html_Output = "<html><head><title>Anmeldung</title></head>";
-    	$html_Output .= "<body>";
-    	$html_Output .= "Anmeldung fehlgeschlagen!<br>";
-		$html_Output .= "<a href=../index.php>Zurück zur Startseite</a>"; 
-    	$html_Output .= "</body></html>";
-   	
-    }
-
-	echo $html_Output;
 ?>
 
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Anmeldung</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../view/css/css_main.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+            <h1>Anmeldung</h1>
+				<p>Die Anmeldung war erfolgreich.</p>
+				<p>Sie werden in kürze automatisch weitergeleitet.</p>
+				<a href=../model/dbzugriffe.php>Direkt zur Service Seite.</a>
+				<meta http-equiv="refresh" content="5; URL=../model/dbzugriffe.php">
+            </form>
+		</div>
+	</body>
+</html>
 
 
 

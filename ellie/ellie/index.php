@@ -63,8 +63,8 @@
 	                        <p class="hero-paragraph is-revealing">Brauchen Sie unterstützung bei einem IT Problem? Dann melden Sie sich direkt hier:</p>
 							<div class="hero-form field field-grouped is-revealing">
 	                            <div class="control control-expanded">
-								<form action="model/dbzugriffe.php">
-    								<input type="email" name="benutzer" placeholder="Email" />
+								<form action="control/anmeldung.php">
+    								<input type="email" name="email" placeholder="Email" />
     								<input type="password" name="password" placeholder="Password" />
     								<input type="submit" value="Log in" />
   								</form>

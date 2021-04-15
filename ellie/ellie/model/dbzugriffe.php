@@ -24,9 +24,9 @@ if (isset($_REQUEST["btnSave"])) {
                     ,astd_pers 
                     ,astd_servicebeschreibung)
                 VALUES 
-                    ('".$_REQUEST["date"]."'
-                    ,'".$_REQUEST["pers"]."'
-                    ,'".$_REQUEST["beschr"]."'
+                    ('".htmlspecialchars( $_REQUEST["date"])."'
+                    ,'".htmlspecialchars($_REQUEST["pers"])."'
+                    ,'".htmlspecialchars($_REQUEST["beschr"])."'
                     )";
         
         //Variante MySQLi
@@ -39,9 +39,9 @@ if (isset($_REQUEST["btnSave"])) {
     }
     if ($_REQUEST["sqlModus"] == "UPDATE") {
         $sql = "UPDATE t_computerservice 
-                SET astd_datum = '".$_REQUEST["date"]."' 
-                   ,astd_pers = '".$_REQUEST["pers"]."' 
-                   ,astd_servicebeschreibung = '".$_REQUEST["beschr"]."' 
+                SET astd_datum = '".htmlspecialchars($_REQUEST["date"])."' 
+                   ,astd_pers = '".htmlspecialchars($_REQUEST["pers"])."' 
+                   ,astd_servicebeschreibung = '".htmlspecialchars($_REQUEST["beschr"])."' 
                 WHERE astd_id = ".$_REQUEST["rowID"]." ;";
         
         //Variante MySQLi
@@ -116,7 +116,7 @@ function getList($sql, $host, $database, $user, $pass) {
 }
 
 function getInputFields($sql, $host, $database, $user, $pass) {
-    $out  = ""; //Variablen deklarieren
+    $out  = ""; 
     $key  = "";
     $date  = "";
     $pers  = "";
@@ -175,7 +175,7 @@ function getInputFields($sql, $host, $database, $user, $pass) {
 	<body>
 		<div id="wrapper">
         &nbsp; | &nbsp; <a href=../index.php>Startseite</a> &nbsp; | &nbsp;
-        <a href=../control/abmeldung.php>abmelden</a><br> &nbsp; | &nbsp; 
+        <a href=../control/abmeldung.php>Abmelden</a><br> &nbsp; | &nbsp; 
             <h1>Serviceanfragen</h1>
             <form action="dbzugriffe.php" method="post">
             	<table>

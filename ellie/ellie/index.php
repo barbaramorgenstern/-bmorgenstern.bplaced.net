@@ -64,8 +64,8 @@
 							<div class="hero-form field field-grouped is-revealing">
 	                            <div class="control control-expanded">
 								<form action="control/anmeldung.php">
-    								<input type="email" name="email" placeholder="Email" />
-    								<input type="password" name="password" placeholder="Password" />
+    								<input type="email" name="email" placeholder="Email" required />
+    								<input type="password" name="password" placeholder="Password" required/>
     								<input type="submit" value="Log in" />
   								</form>
 	                            </div>

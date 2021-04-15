@@ -60,7 +60,7 @@
                     <div class="hero-inner">
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0 is-revealing">Computer Services</h1>
-	                        <p class="hero-paragraph is-revealing">Brauchen Sie unterstützung bei einem IT Problem? Dann melden Sie sich direkt hier:</p>
+	                        <p class="hero-paragraph is-revealing">Brauchen Sie Unterstützung bei einem IT Problem? Dann melden Sie sich direkt hier:</p>
 							<div class="hero-form field field-grouped is-revealing">
 	                            <div class="control control-expanded">
 								<form action="control/anmeldung.php">
@@ -400,10 +400,8 @@
 	                            </div>
 	                        </div>
 							<div>
-						 	<h1>
-	  						Kontaktformular
-	 		 				</h1>
-							  <form action="formularfelder.php" method="post" name="form1" id="form1" >
+						 	<h1>Kontaktformular</h1>
+							  <form action="control/formularfelder.php" method="post" name="form1" id="form1" >
 								<label for="vorname"><b>Vorname:</b></label><br>
 								<input type="text" id="vorname" name="vorname"><br><br>
 								
@@ -419,9 +417,9 @@
 								<label for="nachricht"><b>Nachricht:</b></label><br>
 								<textarea id="nachricht" name="nachricht" rows="10" cols="50"></textarea> <br><br>
 								
-								<table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="table">
+								<table width="400" cellpadding="5" cellspacing="1" class="table">
 								<tr>
-								<td>&nbsp;</td> <!-- return validate();-->
+								<td>&nbsp;</td>
 								<td><button name="g-recaptcha" onclick="" value="Submit" class="button1 g-recaptcha" data-sitekey="6Lfw9p4aAAAAANKwx8ADOxot6v6Odkr2PmGrZDwH" data-callback='onSubmit' data-action='submit'>Submit</button></td>
 								</tr>
 								</table>

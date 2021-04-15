@@ -1,11 +1,12 @@
 <?php
+
 //send_email.php
-$email_from = "absender@domain.de";   //Absender falls keiner angegeben wurde
+$email_from = "absender@domain.de";   //Absender
 $sendermail_antwort = false;      //E-Mail Adresse des Besuchers als Absender. false= Nein ; true = Ja
 $name_von_emailfeld = "email";   //Feld in der die Absenderadresse steht
  
-$empfaenger = $_POST['email']; //Empfänger-Adresse
-$mail_cc = ""; //CC-Adresse, diese E-Mail-Adresse bekommt einer weitere Kopie
+$empfaenger = htmlspecialchars(  $_REQUEST['email'] ); //Empfänger-Adresse
+$mail_cc = "moba.morgenstern@gmail.com"; //CC-Adresse, diese E-Mail-Adresse bekommt einer weitere Kopie
 $betreff = "Kontaktanfrage"; //Betreff der Email
  
 $url_ok = "ok.php"; //Zielseite, wenn E-Mail erfolgreich versendet wurde
@@ -58,7 +59,7 @@ $header .= "\nContent-type: text/plain; charset=utf-8";
 $mail_senden = mail($empfaenger,$betreff,$msg,$header);
  
  
-//Weiterleitung, hier konnte jetzt per echo auch Ausgaben stehen
+//Weiterleitung
 if($mail_senden){
    header("Location: ".$url_ok); //Mail wurde gesendet
   exit();

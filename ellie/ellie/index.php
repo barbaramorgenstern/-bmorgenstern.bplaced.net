@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modul 133</title>
+    <title>Computerservice</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,400i,500,700|Titillium+Web:600" rel="stylesheet">
     <link rel="stylesheet" href="view/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
@@ -24,7 +24,7 @@
                         <h1 class="m-0">
                             <a href="#">
 								<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-								    <title>Ellie</title>
+								    <title>M133</title>
 								    <defs>
 								        <linearGradient x1="0%" y1="0%" y2="100%" id="logo-a">
 								            <stop stop-color="#4353FF" offset="0%"/>
@@ -59,7 +59,7 @@
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0 is-revealing">Computer Services</h1>
+	                        <h1 class="hero-title mt-0 is-revealing">Computerservice</h1>
 	                        <p class="hero-paragraph is-revealing">Brauchen Sie Unterstützung bei einem IT Problem? Dann melden Sie sich direkt hier:</p>
 							<div class="hero-form field field-grouped is-revealing">
 	                            <div class="control control-expanded">

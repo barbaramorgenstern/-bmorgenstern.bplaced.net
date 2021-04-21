@@ -18,7 +18,6 @@
 				<p>Sie werden in kürze automatisch weitergeleitet.</p>
 				<a href=../model/dbzugriffe.php>Direkt zur Service Seite.</a>
 				<meta http-equiv="refresh" content="5; URL=../model/dbzugriffe.php">
-            </form>
 		</div>
 	</body>
 </html>

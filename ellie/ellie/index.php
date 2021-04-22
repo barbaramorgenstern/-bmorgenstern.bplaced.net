@@ -420,7 +420,7 @@
 								<table width="400" cellpadding="5" cellspacing="1" class="table">
 								<tr>
 								<td>&nbsp;</td>
-								<td><button name="g-recaptcha" onclick="" value="Submit" class="button1 g-recaptcha" data-sitekey="6Lfw9p4aAAAAANKwx8ADOxot6v6Odkr2PmGrZDwH" data-callback='onSubmit' data-action='submit'>Submit</button></td>
+								<td><button type="button" name="g-recaptcha" onclick="" value="Submit" class="button1 g-recaptcha" data-sitekey="6Lfw9p4aAAAAANKwx8ADOxot6v6Odkr2PmGrZDwH" data-callback='onSubmit' data-action='submit'>Submit</button></td>
 								</tr>
 								</table>
 							</form>

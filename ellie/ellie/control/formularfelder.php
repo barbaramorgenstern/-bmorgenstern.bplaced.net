@@ -11,10 +11,26 @@ $betreff = "Kontaktanfrage"; //Betreff der Email
  
 $url_ok = "ok.php"; //Zielseite, wenn E-Mail erfolgreich versendet wurde
 $url_fehler = "fehler.php"; //Zielseite, wenn E-Mail nicht gesendet werden konnte
- 
- 
- 
- 
+
+if(
+   !(
+      // Alle felder müssen gesendet werden
+      isset($_POST["vorname"]) &&
+      isset($_POST["nachname"]) &&
+      isset($_POST[$name_von_emailfeld]) &&
+      isset($_POST["betreff"]) &&
+      isset($_POST["nachricht"]) &&
+      // Alle felder dürfen nicht leer sein
+      !empty($_POST["vorname"]) &&
+      !empty($_POST["nachname"]) &&
+      !empty($_POST[$name_von_emailfeld]) &&
+      !empty($_POST["betreff"]) &&
+      !empty($_POST["nachricht"]))
+   ) {
+   header("Location: ".$url_fehler); //Fehler beim Senden
+   exit();
+}
+
 //Diese Felder werden nicht in der Mail stehen
 $ignore_fields = array("submit","g-recaptcha-response");
  
@@ -32,11 +48,11 @@ $time = date("H:i");
 $msg = ":: Gesendet am $tag, den $n.$monat.$jahr - $time Uhr ::\n\n";
  
 //Hier werden alle Eingabefelder abgefragt
-foreach($_POST as $vorname => $value) {
-   if (in_array($vorname, $ignore_fields)) {
+foreach($_POST as $key => $value) {
+   if (in_array($key, $ignore_fields)) {
         continue; //Ignore Felder wird nicht in die Mail eingefügt
    }
-   $msg .= "::: $vorname :::\n$value\n\n";
+   $msg .= "::: $key :::\n$value\n\n";
 }
  
  
